@@ -11,4 +11,8 @@ También crea un archivo de configuracion de virtual host para proxy reverso con
 ---
 
 Se debe editar el archivo balacedvh_vars.yml con las variables deseadas, luego se debe editar el archivo inventario con las maquinas sobre las cuales desea instalar y configurar el proxy reverso con balanceo de carga.
-Luego de realizados debe ejecutar el playbook mediante el comando ansible-playbook playbook.yml con un usuario que pueda conectar mediante ssh y escalar permisos sudo en los equipos objetivo.
+Luego de realizados debe ejecutar el playbook mediante el comando ***ansible-playbook playbook.yml*** con un usuario que pueda conectar mediante ssh y escalar permisos sudo en los equipos objetivo.
+
+``` 
+ansible-playbook playbook.yml
+```

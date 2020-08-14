@@ -1,0 +1,7 @@
+---
+# vars file for ./roles/apache-install-linux
+distribucion:
+  Debian:
+    - apache2
+  RedHat:
+    - httpd

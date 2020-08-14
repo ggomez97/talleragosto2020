@@ -1,0 +1,8 @@
+---
+- hosts: ProxyServers
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+
+  roles:
+  - role: apache-install-linux

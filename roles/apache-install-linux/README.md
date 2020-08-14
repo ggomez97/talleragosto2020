@@ -12,7 +12,7 @@ Las variables se encuentran en el archivo /var/main.yml.
 Ejempo de uso en un Playbook
 ----------------
 
-Simplemente agrege el rol a su playbook.
+Simplemente agregue el rol a su playbook.
 
     - hosts: servers
       roles:

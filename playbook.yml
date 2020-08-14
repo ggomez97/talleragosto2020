@@ -3,6 +3,41 @@
   remote_user: ansible
   become: yes
   become_method: sudo
+  vars_files:
+  - balancedvh_vars.yml
 
   roles:
   - role: apache-install-linux
+
+  tasks:
+  - name: Create loadbalance virtualhost conf RedHat
+    template:
+      src: templates/balancedvh.j2
+      dest: /etc/httpd/conf.d/balancedvh.conf
+      owner: root
+      mode: '0644'
+    when: ansible_facts['os_family'] == "RedHat"
+    notify: Restart httpd
+
+
+  - name: Create loadbalance virtualhost conf Debian
+    template:
+      src: templates/balancedvh.j2
+      dest: /etc/apache2/sites-enabled/000-default.conf
+      owner: root
+      mode: '0644'
+    when: ansible_facts['os_family'] == "Debian"
+    notify: Restart apache2
+
+  handlers:
+  - name: Restart httpd
+    service:
+      name: httpd
+      state: restarted
+      enabled: yes
+
+  - name: Restart apache2
+    service:
+      name: apache2
+      state: restarted
+      enabled: yes

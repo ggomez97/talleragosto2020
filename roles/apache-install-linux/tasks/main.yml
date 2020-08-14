@@ -28,6 +28,12 @@
     - '443'
   when: ansible_facts['os_family'] == "Debian"
 
+- name: Enable proxy and proxy_balancer modules Debian
+  apache2_module:
+    name: proxy
+    state: present
+  when: ansible_facts['os_family'] == "Debian"
+
 - name: Start and enable Apache
   service:
     name: "{{ item }}"

@@ -1,0 +1,12 @@
+---
+#Variables file for loadbalancer configuration
+nombre_cluster: webtaller
+nodo1: taller1.com.uy
+nodo2: taller2.com.uy
+puerto1: 80
+puerto2: 80
+distribucion:
+  Debian:
+    - apache2
+  RedHat:
+    - httpd

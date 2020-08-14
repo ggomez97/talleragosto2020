@@ -5,7 +5,7 @@
 ---
 
 Este playbook de ansible instala Apache Web Server en distribuciones Debian, RedHat y sus derivadas.
-También crea un archivo de configuracion de virtual host para proxy reverso con balanceo de carga.
+También crea un archivo de configuración de virtual host para proxy reverso con balanceo de carga.
 
 ## Funcionamiento y utilización
 ---

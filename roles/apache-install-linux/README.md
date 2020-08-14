@@ -9,10 +9,10 @@ Role Variables
 
 Las variables se encuentran en el archivo /var/main.yml.
 
-Example Playbook
+Ejempo de uso en un Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Simplemente agregue el rol a su playbook.
 
     - hosts: servers
       roles:
